@@ -1,0 +1,433 @@
+using System;
+using System.IO;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+
+namespace gsserver{
+
+class Program{
+public static string forActionPg = ""; 
+public static string forQueryRem = "";
+public static string subDir = "";
+public static string actionPg = "";
+public static string queryRem = "";
+public static string fullPath = "";
+public static int bsLoc = 0;
+public static int stopLoc = 0;
+public static int startLoc = 0;
+public static string dirName = "";
+public static string forSubDir = "";
+public static int qmLoc = 0;
+public static int perLoc = 0;
+public static int forwardSlash = 0;
+public static int myGlobal;
+public static int counter = 0;
+public static byte[] queryString;
+public static string handleString;
+public static int eqlCount = 0;
+public static int[] eqLoc = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+public static int[] ampLoc = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+public static string thisData, thatData;
+public static string[] rVarName = {"", "", "", "", "", "", "", "", "", ""};
+public static string[] rVarValue = {"", "", "", "", "", "", "", "", "", ""};
+
+class ServClasses{
+public ServClasses(string argCount, string argVector){
+thatData = argVector;
+thisData = argCount;
+Program.myGlobal = 18;
+}
+
+public async void PassData(){
+Console.WriteLine("This Data: " + thisData + "\tThatData: " + thatData + "\n" + Program.myGlobal);
+Program.myGlobal = 25;
+}
+
+public async void ParseFunc(string queryReq){
+for(int iterDir = 1; iterDir < Program.dirName.Length; ++iterDir){
+        Program.subDir = Program.subDir + Program.dirName[iterDir];
+}
+Console.WriteLine("subDir after iterDir for first folder traversal: " + Program.subDir);
+int ampCount = 0;
+string adminCom = "";
+for(int order = 3; order < queryReq.Length; ++order){
+        if(queryReq[order] == '\\' || queryReq[order] == '/'){
+        Program.bsLoc = order;                       
+        Console.WriteLine("found backslash: " + Program.bsLoc);
+          }else if(queryReq[order] == '?'){
+                Program.qmLoc = order;
+                Console.WriteLine("question mark: " + Program.qmLoc);
+           }else if(queryReq[order] == '/'){
+                Program.forwardSlash = order;
+                Console.WriteLine("forwardslash: " + Program.forwardSlash);
+           }else if(queryReq[order] == '='){
+                eqLoc[eqlCount] = order;
+                Console.WriteLine($"equality operator[{eqlCount}]: " + eqLoc[eqlCount]);
+                ++eqlCount;
+           }else if(queryReq[order] == '.'){
+                Program.perLoc = order;
+                Console.WriteLine("period location: " + Program.perLoc);
+           }else if(queryReq[order] == '&'){
+                Program.ampLoc[ampCount] = order;
+                Console.WriteLine($"ampersand location[{ampCount}]: " + ampLoc[ampCount]);
+                ++ampCount;
+           }else if((queryReq[order] == '*') && (queryReq[order - 1] == '*') && (queryReq[order - 2] == '*')){                                                                      Console.WriteLine("using asterisks for trigger actions");
+            	for(int itCommands = order + 1; itCommands < queryReq.Length; ++itCommands){
+                        adminCom = adminCom + queryReq[itCommands];
+                }
+		if(adminCom != ""){
+                	Console.WriteLine("hit for trigger action ln 91. adminCom = " + adminCom);
+          		AdminFunc(adminCom);
+                }else{
+                        AdminFunc("exit");
+                }
+           }else{
+                continue;
+           }
+           ampCount = 0;
+}
+}
+
+public async void AdminFunc(string usrCmd){
+        string readInput = "";
+        if(usrCmd != ""){
+        readInput = usrCmd;
+                if(readInput != "exit"){
+                        do{
+                                if(readInput == ""){
+                                        Console.WriteLine("Exiting");
+                                        break;
+                                }else if(readInput == "exit"){
+                                        Console.WriteLine("Exiting");
+                                        break;
+                                }else if(readInput == "admin"){
+                                        Console.WriteLine("hit");
+                                        readInput = "exit";
+                                        break;
+                                }else
+                                continue;
+                        }while(readInput != "exit" || readInput != "");
+                }else{
+                        AdminFunc("exit");
+                }
+        }else{
+        	if(readInput != "exit"){
+                	do{
+                        	readInput = Console.ReadLine();
+                        	if(readInput == ""){
+                                	Console.WriteLine("Exiting");
+                                	break;
+                        	}else if(readInput == "exit"){
+                                	Console.WriteLine("Exiting");
+                                	break;
+                        	}else if(readInput == "admin"){
+                                	Console.WriteLine("hit");
+                        	}else
+                        		continue;
+                	}while(readInput != "exit" || readInput != "");
+        	}else
+        		Console.WriteLine("Exiting AdminFunc() from ProcessRequestAsync()");
+	}
+}
+}
+
+class WebServer{
+HttpListener _listener; // Declare class variables for use in constructor before constructor declaration
+string _baseFolder; 
+
+public WebServer(string uriPrefix, string baseFolder){
+_listener = new HttpListener();
+_listener.Prefixes.Add (uriPrefix);
+_baseFolder = baseFolder;
+}
+
+public async void MyFunc(){
+	Console.WriteLine("Ran my function with server. prefix");
+	Console.WriteLine("\n" + Program.myGlobal + "\n");
+}
+
+public async void Start(){
+_listener.Start();
+	while(true)
+	try{
+		var context = await _listener.GetContextAsync();
+		Task.Run (() => ProcessRequestAsync (context));
+	}
+	catch (HttpListenerException){break;} 
+	catch (InvalidOperationException){break;
+}
+}
+
+public void Stop() => _listener.Stop();
+
+async void ProcessRequestAsync(HttpListenerContext context){
+	try{
+string filename = Path.GetFileName (context.Request.RawUrl); // GetFileName !!!!!! use Path.ChangeExtension to remove query string and replace with proper suffix
+Console.WriteLine("Filename: " + filename);
+string fullPath = Path.GetFullPath(context.Request.RawUrl);
+Console.WriteLine("Get full path: " + fullPath);
+string fileExt = Path.GetExtension(context.Request.RawUrl);
+Console.WriteLine("Get extension: " + fileExt);                         // use extension in for loop with < Program.qmLoc
+Program.dirName = Path.GetDirectoryName(context.Request.RawUrl);
+Console.WriteLine("GetDirectoryName: " + Program.dirName);
+string filenameWOExt = Path.GetFileNameWithoutExtension(context.Request.RawUrl);
+Console.WriteLine("filename without extension: " + filenameWOExt);
+// if I can pass - can I pass an object in a query string? as if it !!!!!!!!!!!!!!! LOAD IT INTO A VARIABLE????????????????????
+++counter;
+/*if(filename == ""){
+        filename = "logUnk.html";
+        fullPath = "C:\\defaults\\defUnk\\logUnk.html";
+        Program.dirName = "/defaults/defUnk";
+        filenameWOExt = "logUnk";
+        fileExt = ".html";
+        Program.handleString = ($"({counter}) [{DateTime.Now}]: {filename}\n");
+}else{*/
+Program.handleString = ($"({counter}) [{DateTime.Now}]: {filename}\n");   
+//}
+// can use braces within strings for interpolation
+//("(" + counter + ") " + "[" + DateTime.Now + "]: " + filename + "\n");
+//File.AppendAllText("queryString.txt", Program.handleString); // create html doc that makes obj's of each entry with the key as the access key
+Console.WriteLine(Program.handleString);
+// need to write code for trigger action that determines which function is ran for the incoming request - amend html docs with appropriate actionpg
+// save filename to file and access from c++, and javaScript
+//File.AppendAllText("queryStringAdmin.txt", Program.handleString);
+//File.AppendAllText("queryStringFileAccess.txt", Program.handleString);  // can change or leave without suffix for shared objects?/applications = API
+                                        //should be able to extract portions of string using Path.Get
+// make system call to parseQuery.exe (C:\Users\brian\source\repos\parseQuery\x64\Debug>parseQuery.exe)
+// to parse filename contents and save as formatted file for_each new web user (for_each client = deploy updates!!!!)
+// try creating a string* pointer and iterating through filename in C# as well
+/*if(filename[0] = '?'){
+        for(int remQuery = 0; remQuery < filename.Length; ++remQuery){
+                if(filename[remQuery] == '='){
+                        string var1 = ""
+                }
+        }
+}else if(filename[0] = '/'){
+        for(int leftover = 1; leftover < (filename.Length - 1); ++leftover){
+                if(filename[leftover] != '='){
+                Console.WriteLine("for folder traversal of subDir - see line 140");
+                }else{
+                }
+        }
+}*/
+//if there is only query string re-direct request to another machine (proxy) for handling
+// and log data
+Program.actionPg = Path.GetFileNameWithoutExtension(context.Request.RawUrl);
+                Console.WriteLine("actionpg: " + actionPg);
+Program.queryRem = Path.GetExtension(context.Request.RawUrl);
+                Console.WriteLine("queryRem: " + queryRem);
+
+if(Program.queryRem == "" && Program.actionPg != "" && Program.actionPg[0] == '?'){
+        Program.queryRem = Program.actionPg;
+        Program.actionPg = "";
+}
+
+if(Program.dirName == "" && Program.actionPg == "" && Program.queryRem[0] == '?'){
+fullPath = Program.queryRem;
+}
+
+Program.actionPg = Path.GetFileNameWithoutExtension(context.Request.RawUrl);
+                Console.WriteLine("actionpg: " + actionPg);
+Program.queryRem = Path.GetExtension(context.Request.RawUrl);
+                Console.WriteLine("queryRem: " + queryRem);
+
+
+
+        var parser = new ServClasses(filename, fullPath);
+        parser.ParseFunc(thatData);
+
+
+/*for(int folderTrav = 3; folderTrav < Program.stopLoc; ++folderTrav){
+                Program.forSubDir = Program.forSubDir + fullPath[folderTrav];
+                Console.WriteLine("forSubDir: " + forSubDir);
+}*/
+       // File.AppendAllText("formorders.txt", Program.handleString);
+        //File.AppendAllText("formorderAdmin.txt", Program.handleString); // write code for '/'
+           /*  if(filename[order] == '?'){// subtract the location value of '/' from value of '?' and create new for loop starting at '/'+1 < '?'
+                      for(int extPort = startLoc; extPort < stopLoc; ++extPort){
+                        actionPg = actionPg + filename[extPort];
+                      }
+                      for(int remQuery = stopLoc; remQuery < filename.Length; ++ remQuery){
+                        queryRem = queryRem + filename[remQuery];               // now need to extract values between '?','=', and '&'
+                      }
+                }*/
+                
+Console.WriteLine(Program.subDir);
+Console.WriteLine(Program.actionPg);
+Console.WriteLine(Program.queryRem);
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+if(actionPg == ""){
+        // action pg shouldn't be NULL, but if it is from "attack" log to specified file, and direct to default G# Management Services Inc. pg.
+}*/
+ /*for(int hRemainder = 0; hRemainder < (filename.Length - filename[hReq]); ++hRemainder){
+                        if(filename[hRemainder] != '='){
+                                Console.WriteLine(filename[hRemainder]);
+                        }else{
+                                Console.WriteLine("fail");
+                        }
+                }*/
+//Program.subDir = Program.forSubDir;
+_baseFolder = Path.Combine(_baseFolder + Program.subDir);          // ADD CODE TO parseQuery TO EXTRACT THE PREFIXED FOLDER, AND APPEND IT TO _BASEFOLDER for tree traversal
+   //     Program.forSubDir = "";
+int filenameQmLoc = 0;
+for(int iterFilename = 0; iterFilename < queryRem.Length; ++iterFilename){
+        if(queryRem[iterFilename] == '?'){
+                filenameQmLoc = iterFilename; // filename question mark location
+        }else{
+                continue;
+        }
+}
+string holdFileExt = fileExt;
+fileExt = "";
+for(int iterExt = 0; iterExt < filenameQmLoc; ++iterExt){
+fileExt = fileExt + holdFileExt[iterExt]; // To isolate file extension
+}
+
+/*for(int iterRem = filenameQmLoc + 1; iterRem < holdFileExt.Length; ++iterRem){
+        Program.queryRem = Program.queryRem  + holdFileExt[iterRem];
+}*/
+
+holdFileExt = "";
+Console.WriteLine("amended fileExt: " + fileExt);
+
+//declare variables to load data, need variable name as string and corresponding data type to the value
+if(fileExt == ""){
+       // Program.actionPg = "logUnk";
+        //fileExt = ".html";
+        //Program.queryRem = "";
+        Console.WriteLine("empty fileExt");
+}else if(fileExt == "" && Program.actionPg[0] == '?'){
+       /* 
+       
+        filenameWOExt = Program.actionPg;
+        Program.queryRem = "";
+        _baseFolder = _baseFolder + Program.subDir;
+        Program.dirName = "";*/
+ //       fileExt = Program.queryRem;
+       // Program.subDir = "defaults/defUnk";
+        Program.queryRem = Program.actionPg;
+       // Program.actionPg = "logUnk";
+       // fileExt = ".html";
+        /*for(int makeRem = Program.qmLoc; makeRem < Program.queryRem.Length - Program.qmLoc; ++makeRem){
+                Program.queryRem = Program.queryRem + Program.queryRem[makeRem];
+        }*/
+}else{      
+        int countVars = 0;
+        int holdQmLoc = Program.qmLoc;
+
+        for(int hVars = (holdQmLoc + 1); hVars < eqLoc[countVars]; ++hVars){
+                rVarName[countVars] = rVarName[countVars] + fullPath[hVars];// could use holdFileExt also to keep function contained to itself
+        }
+       // Console.WriteLine($"rVarName[{countVars}]: " + rVarName[countVars]);
+        int holdCount = countVars;
+        for(int hValue = eqLoc[countVars] + 1; hValue < ampLoc[countVars]; ++hValue){ // need to make array for multiple ampersand locations
+                rVarValue[countVars] = rVarValue[countVars] + fullPath[hValue];
+        }
+        ++countVars;
+        do{
+                for(int hVarsCont = Program.ampLoc[countVars] + 1; hVarsCont < eqLoc[countVars]; ++hVarsCont){
+                        rVarName[countVars] = rVarName[countVars] + fullPath[hVarsCont];        
+                }
+                holdCount = countVars;
+                countVars = 0;
+                Console.WriteLine("ampersand location: " + Program.ampLoc[countVars] + "\t count: " + countVars);
+                for(int hValueCont = eqLoc[countVars + 1] + 1; hValueCont < ampLoc[countVars + 1]; ++hValueCont){
+                        rVarValue[countVars] = rVarValue[countVars] + fullPath[hValueCont];
+                }
+                countVars = holdCount;
+        ++countVars;
+        }while(countVars < Program.eqlCount);
+        
+        
+        for(int iterVars = 0; iterVars < Program.eqlCount; ++iterVars){
+        Console.WriteLine($"rVarName[{(iterVars + 1)}]: " + rVarName[iterVars] + "\t" + $"rVarValue[{(iterVars + 1)}]: " + rVarValue[iterVars]);
+        //must clear variables 
+        }
+        countVars = 0;
+        for(int delVars = 0; delVars < 10; ++delVars){
+                      Program.rVarName[delVars] = "";
+                        Program.rVarValue[delVars] = "";
+        }
+}
+
+Console.WriteLine($"[subDir]\t{Program.subDir}\t[actionPg]\t{Program.actionPg}\t[fileExt]\t{fileExt}\t[queryRem]\t{Program.queryRem}\n");
+
+string path = "";
+if(Program.dirName == "\\"){
+        path = "webroot/defaults/defUnk/logUnk" + fileExt;
+}else if(Program.subDir != ""){ 
+        path = _baseFolder + "/" + filenameWOExt + fileExt;
+}else{
+        path = _baseFolder + filenameWOExt + fileExt;
+}
+
+Program.subDir = "";
+fileExt = "";
+Program.queryRem = "";
+_baseFolder = "webroot/";
+Console.WriteLine("amended path: " + path);
+
+byte[] msg;
+if( !File.Exists (path)){ 
+Console.WriteLine("Resource not found: " + path);
+//get requests to here  - must load data into variable
+context.Response.StatusCode = (int) HttpStatusCode.NotFound;
+msg = Encoding.UTF8.GetBytes(/*"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">" +
+ "<script runat=\"server\">" + "protected void Page_Load(object sender, EventArgs e){" +
+        "System.Text.StringBuilder sb = new System.Text.StringBuilder();" +
+ "sb.Append(\"Is custom errors enabled: \" + Context.IsCustomErrorEnabled.ToString() + \"<br/>\");sb.Append(\"Is debugging enabled: \" +" +
+        "Context.IsDebuggingEnabled.ToString() + \"<br/>\");sb.Append(\"Trace Enabled: \" + Context.Trace.IsEnabled.ToString() + \"<br/>\");" +
+        "sb.Append(\"Number of items in Application state: \" + Context.Application.Count.ToString() + \"<br/>\");try" +
+        "{sb.Append(\"Number of items in Session state: \" + Context.Session.Count.ToString() + \"<br/>\");}catch" +
+        "{sb.Append(\"Session state not enabled. <br/>\");}sb.Append(\"Number of items in the cache: \" + Context.Cache.Count.ToString() + \"<br/>\");" +
+        "sb.Append(\"Timestamp for the HTTP request: \" + Context.Timestamp.ToString() + \"<br/>\");OutputLabel.Text = sb.ToString();}" +
+     "</script><html xmlns=\"http://www.w3.org/1999/xhtml\" ><head runat=\"server\"><title>HttpContext Example</title></head><body>" +
+ "<form id=\"form1\" runat=\"server\"><div>Using the current HttpContext to get information about the current page.<br/>" +
+ "<asp:Label id=\"OutputLabel\" runat=\"server\"></asp:Label></div></form></body></html>*/"<!DOCTYPE html><html><head></head>" +
+                "<body>print<script>localStorage.setItem(\"IAM\", \"Sintax\");</script></body></html>"); // load encoded string into byte array
+ }else{context.Response.StatusCode = (int) HttpStatusCode.OK;
+ msg = File.ReadAllBytes(path);}
+        context.Response.ContentLength64 = msg.Length;  //transferring attribute values between objects
+ using (Stream s = context.Response.OutputStream)await s.WriteAsync (msg, 0, msg.Length); // EXPLAINS FILE I/O AWAIT METHOD FOR PROCESSING EACH LOG
+                                                                                        // LOG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ }catch(Exception ex){Console.WriteLine("Request error: " + ex);};
+}
+}
+static void Main(string[] argv){
+        for(int i = 0; i < argv.Length; ++i){ 
+                if(argv[i] != ""){
+                Console.WriteLine(argv[i]);
+                }else
+                break;
+        }
+
+var server = new WebServer("http://[2601:346:900:8ba0:6be4:1f18:949a:4065]:80/", "webroot/"); // uses @ symbol to create variable/MACRO
+// create new variable and load "new" of TEMPLATE w/args into it to instantiate class -- the member in the class that 
+// shares the name of the class sets the template's parameters
+
+// not needed by used for example
+var servClasses = new ServClasses("this is this", "that is that");
+
+servClasses.PassData();
+//string reqBody = server.GetRequestBody();
+//Console.WriteLine("Request body: " + reqBody + "\n");
+try{
+server.Start();
+server.MyFunc();
+servClasses.PassData();
+Console.WriteLine("Server running... \rEnter command, or press Enter to stop");
+//var stringHandler = 
+servClasses.AdminFunc("");
+/*
+if(readInput != "\0"){
+        Console.WriteLine("Added options");
+        readInput = Console.ReadLine();
+}else
+Console.WriteLine("Exiting");
+*/
+}
+finally{server.Stop();}
+}
+}}

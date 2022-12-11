@@ -1,0 +1,14 @@
+the memory locations are 0's and 1's, too! How do you want to combine those sets of 0's and 1's!!!!! Call them by their hex value. Organize them by their order. Evaluate them by their integer value.
+
+The disassembler uses a set LENGTH to parse the binary code into segments. Those segments ARE the waveforms represented as memory locations in hex form. An assembly program lines up the "players" and assigns them to their "positions" to perform their functions in SYNC with the other processes.
+
+The JavaScript signal generator can be overloaded with attenuation algorithms to alter the order, and length, of the signals generated.
+
+
+
+----How does the dotnet server handle get requests with Hebrew? and files with Hebrew in their filename
+	---Parse Hebrew request by 6 character sets following the question mark. Pass to G# Platform using AdminFunc() like
+		-- with admin commands following ***. 
+		-- what about when saved to file?
+
+-- I can transmit the data from the Chromebook using html for "action" - use input type="file" in the form??? 

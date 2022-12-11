@@ -1,0 +1,67 @@
+using System;
+using System.IO;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace gsserver{
+class Program{
+class WebServer{
+HttpListener _listener;
+string _baseFolder;	// Your web page folder
+
+public WebServer(string uriPrefix, string baseFolder){
+_listener = new HttpListener();
+_listener.Prefixes.Add (uriPrefix);
+_baseFolder = baseFolder;
+}
+
+public async void Start(){
+_listener.Start();
+while(true)
+try
+{
+var context = await _listener.GetContextAsync();
+Task.Run (() => ProcessRequestAsync (context));
+}
+catch (HttpListenerException){break;}	// Listener stopped.
+catch (InvalidOperationException){break;}	// Listener stopped.
+}
+
+public void Stop() => _listener.Stop();
+
+async void ProcessRequestAsync (HttpListenerContext context){
+try{
+string filename = Path.GetFileName (context.Request.RawUrl);		// this is what I need to pass to my "makePath()" method that appends this to "webroot/"
+//Console.WriteLine(_baseFolder);
+string truncPath = "webroot/";			// will need to move all HTML files to webroot to use links and make additional pages.
+string path = Path.Combine (truncPath, filename); 			// !!! need to create method that removes index2.html from the path and allows
+byte[] msg;										// the filename to be appended to "webroot"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+if( !File.Exists (path)){
+Console.WriteLine("Resource not found: " + path);
+context.Response.StatusCode = (int) HttpStatusCode.NotFound;
+msg = Encoding.UTF8.GetBytes("<html><body><script type=\"text/javascript\">document.write(\"java\");</script><p style=\"color: blue\">more data</p><br><br><br>more data</p></body></html>");
+}
+else{
+context.Response.StatusCode = (int) HttpStatusCode.OK;
+msg = File.ReadAllBytes(path);
+}
+context.Response.ContentLength64 = msg.Length;
+using (Stream s = context.Response.OutputStream)
+await s.WriteAsync (msg, 0, msg.Length);
+}
+catch(Exception ex){Console.WriteLine("Request error: " + ex);}
+}
+}
+
+static void Main(){
+var server = new WebServer("http://10.0.0.109:80/", @"");
+
+try{
+server.Start();	// What I need to do is declare an instance of the above nested class
+Console.WriteLine("Server running... press Enter to stop");
+Console.ReadLine();
+}
+finally{server.Stop();}
+}
+}}

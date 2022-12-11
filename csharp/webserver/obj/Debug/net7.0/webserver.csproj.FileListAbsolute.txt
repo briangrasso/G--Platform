@@ -1,0 +1,5 @@
+C:\Users\brian\masm\csharp\webserver\obj\Debug\net7.0\webserver.csproj.AssemblyReference.cache
+C:\Users\brian\masm\csharp\webserver\obj\Debug\net7.0\webserver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brian\masm\csharp\webserver\obj\Debug\net7.0\webserver.AssemblyInfoInputs.cache
+C:\Users\brian\masm\csharp\webserver\obj\Debug\net7.0\webserver.AssemblyInfo.cs
+C:\Users\brian\masm\csharp\webserver\obj\Debug\net7.0\webserver.csproj.CoreCompileInputs.cache

@@ -1,0 +1,120 @@
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\Code.exe'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\ntdll.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\kernel32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\KernelBase.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\oleaut32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\msvcp_win.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\ucrtbase.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\combase.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\rpcrt4.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\ws2_32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\crypt32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dbghelp.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\msimg32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\gdi32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\win32u.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\gdi32full.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\user32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\winmm.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\msvcrt.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\IPHLPAPI.DLL'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\version.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\userenv.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\DWrite.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\winspool.drv'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\secur32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\UIAutomationCore.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\winhttp.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dhcpcsvc.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\sechost.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\propsys.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\ffmpeg.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\sspicli.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\imm32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\bcryptprimitives.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\advapi32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\cryptbase.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\powrprof.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\umpdc.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\uxtheme.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\mswsock.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\shell32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\SHCore.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\ntmarta.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\kernel.appcore.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\msctf.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\ole32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\comctl32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dpapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\nlaapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\nsi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dhcpcsvc6.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dnsapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\clbcatq.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\TextInputFramework.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\CoreUIComponents.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\CoreMessaging.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\WinTypes.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\Windows.UI.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\InputHost.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\WindowManagementAPI.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\twinapi.appcore.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\windows.storage.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\wldp.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\shlwapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\profapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\wtsapi32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\winsta.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\mscms.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\coloradapterclient.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\MMDevAPI.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\devobj.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\cfgmgr32.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules.asar.unpacked\vscode-policy-watcher\build\Release\vscode-policy-watcher.node'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\gpapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\MsSpellCheckingFacility.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\BCP47Langs.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\OneCoreUAPCommonProxyStub.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules.asar.unpacked\spdlog\build\Release\spdlog.node'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\NapiNSP.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\pnrpnsp.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\wshbth.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\winrnr.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dwmapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\DataExchange.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\d3d11.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dcomp.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dxgi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\Windows.Globalization.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\BCP47mrm.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\oleacc.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\atlthunk.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\directmanipulation.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules.asar.unpacked\@vscode\sqlite3\build\Release\vscode-sqlite3.node'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\policymanager.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\msvcp110_win.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules.asar.unpacked\windows-mutex\build\Release\CreateMutex.node'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules.asar.unpacked\native-is-elevated\build\Release\iselevated.node'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules.asar.unpacked\native-keymap\build\Release\keymapping.node'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules.asar.unpacked\@vscode\windows-registry\build\Release\winregistry.node'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\linkinfo.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\ntshrui.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\srvcli.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\cscapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\bcrypt.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\TaskFlowDataEngine.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\cdp.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\dsreg.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\cryptsp.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\msasn1.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\rsaenh.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\cryptnet.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Users\brian\AppData\Local\Programs\Microsoft VS Code\resources\app\node_modules.asar.unpacked\keytar\build\Release\keytar.node'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\avrt.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\twinapi.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Program Files\Common Files\microsoft shared\ink\tiptsf.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\duser.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\TextShaping.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\apphelp.dll'. 
+'Code.exe' (Win32): Loaded 'C:\Windows\System32\ninput.dll'. 
+The thread 0x5260 has exited with code 0 (0x0).
