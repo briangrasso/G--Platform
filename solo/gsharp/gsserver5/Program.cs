@@ -158,17 +158,17 @@ class ServClasses{
 
     public async void FixDirectory(string fxDir){
         Program.directory = "";
+        ushort incBSCount = 1;
         if(Program.bsCount > 1){
-            ushort incBSCount = 0;
             do{
-                for(int bsGreater = Program.bsLoc[incBSCount] + 1; bsGreater < Program.bsLoc[incBSCount + 1]; ++bsGreater){
+                for(int bsGreater = Program.bsLoc[incBSCount - 1] + 1; bsGreater < Program.bsLoc[incBSCount] - 1; ++bsGreater){
                 Program.directory = Program.directory + fxDir[bsGreater];
                 }
                 Program.directory = Program.directory + "/";
                 ++incBSCount;
             }while(incBSCount < Program.bsCount);
         }else{
-            for(int fixDir = Program.bsLoc[Program.bsCount] + 1; fixDir < fxDir.Length; ++fixDir){
+            for(int fixDir = Program.bsLoc[incBSCount]; fixDir < fxDir.Length; ++fixDir){
                 Program.directory = Program.directory + fxDir[fixDir];
             }
         }
@@ -232,7 +232,8 @@ async void ProcessRequestAsync(HttpListenerContext context){
         Console.WriteLine("filename after fix: " + Program.filename);
 
         if(Program.directory != ""){
-            parser.FixDirectory(Program.directory);
+            var parseDir = new ServClasses();
+            parseDir.FixDirectory(Program.directory);
         }
 
         string path = _baseFolder + Program.directory + "/" + Program.filename;
@@ -242,7 +243,7 @@ async void ProcessRequestAsync(HttpListenerContext context){
         Console.WriteLine("Resource not found: " + path);
         //get requests to here  - must load data into variable
         context.Response.StatusCode = (int) HttpStatusCode.NotFound;
-        msg = Encoding.UTF8.GetBytes("<!DOCTYPE html><html><head></head>" +
+        msg = Encoding.UTF8.GetBytes("<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><link rel=\"icon\" type=\"image/x-icon\" href=\"brianhead.jpeg\"></link></head>" +
                         "<body>print<script>localStorage.setItem(\"IAM\", \"Sintax\");</script></body></html>");
         }else{context.Response.StatusCode = (int) HttpStatusCode.OK;
         msg = File.ReadAllBytes(path);}
@@ -264,7 +265,7 @@ static void Main(string[] argv){
         }
     }
 
-    var server = new WebServer("http://[2601:346:900:8ba0:6be4:1f18:949a:4065]:80/", @"webroot/");
+    var server = new WebServer("http://172.17.128.1:80/", @"webroot/");
     
     try{
         server.Start();

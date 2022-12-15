@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eloquent</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="script.css" type="text/css">
+        <script src="script.js" language="javascript"></script>
+    </head>
+    <body>
+        <div>
+            <p>
+                <input type="file" multiple>
+                <script>
+                    document.write(varOne);
+                    console.log(FuncOne(varOne));
+                    console.log(FuncTwo(FuncOne(varOne)));
+                    let varTwo = FuncTwo(FuncOne(varOne));
+                    document.write(" - " + varTwo);
+                    let input = document.querySelector("input"); // !!!!!!!!! selecting INPUTS see html doc that works with form inputs for anyapilates!!!!!!!!!!!!!!!!
+                    // add id and class in .css for parsing large files into multiple transmissions
+                    // write for loop to iterate through submissions???
+                    input.addEventListener("change", () => {
+                        /*here I'm reading text from file as string
+                        for parsing by subsequent .js code*/ 
+                        /*Need to learn method for printing to file
+                        and reading from c#/c++*/ 
+                        for(let file of Array.from(input.files)){// input.files is "class notation" for input OBJ/i.e. attribute/parameter, use
+                                                                    // toString() in javascript obj functionality??? to return the contents on server???
+                            let reader = new FileReader();
+                            reader.addEventListener("load", ()=>{
+                                console.log("File", file.name, "starts with", reader.result.slice(0, 1000)); // ADD GET METHOD WITH ACTION TO PASS CONTENTS BACK TO SERVER!!!!!!!!!
+                                // loads the file to the browser and outputs file data!!!
+                                // use from line 19 on in formatt.html to ADD FILE DATA 
+                                // TO HTML <INPUT> OBJECT -- ADD ID AND CLASS -- 
+                                    // THIS GOES IN FILE FOO() REQUESTS ddos WITH file.name already 
+                                        //defined. the submit button passes the input back to 
+                                        // gsserver3 on Gsharp1 for parsing - handle file data as variable data
+                                
+                                // CHANGE TO MAX.LENGTH() and send to server as string
+                                //need to use 'f' method to handle whitespaces from client
+                                // 
+                                // HUGE! return docs from client!!!!!!!!!!!!!! and UPLOAD TO STORAGE!!!!!!!
+                            });
+                            reader.readAsText(file);
+                        }
+                    });
+                    </script><!--
+                        if (input.files.length > 0){
+                            let file = input.files[0];
+                            console.log("You chose", file.name);
+                            if (file.type) console.log("It has type", file.type);
+                        }
+                    });
+                </script>-->
+            </p> <!-- Let allows value to be stored, set equal to querySelector that points to an object on a page - bindings pg. 24 Eloquent-->
+            <p>
+                <form method="get" action="http://72.173.94.14/script2.html">
+                    <p>Name: <input type="text" name="name"></p>
+                    <p>Message:<br><textarea name="message"></textarea></p>
+                    <p><button type="submit">Send</button></p>
+                </form>
+            </p>
+        </div>
+    </body>
+</html>

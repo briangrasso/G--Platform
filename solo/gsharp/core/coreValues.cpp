@@ -20,12 +20,13 @@ makeHTML << "testing" << get<numAttrib - 4>(fBoard) << "\t" << get<numAttrib - 3
 cout << "testing" << get<numAttrib - 4>(fBoard) << "\t" << get<numAttrib - 3>(fBoard) << "\t" << get<numAttrib - 2>(fBoard) << "\t" << get<numAttrib - 1>(fBoard) << endl;
 }
 
+/* the incoming data from the html GET request can be passed as string variables in C# to child processes as arguments */
 
 int main(){
 GSharpStructs::ToneTable boardGS;
 cout << "Glyph:\t" << "Name:\t" << "ABVal:\t" << "CVal:" << endl;
 
-makeHTML.open("C:\\Users\\brian\\masm\\solo\\gsharp\\core\\makehtml2.html", ios_base::out);	// use httpserver in node.js to pass makehtml.html to Gsharp1????
+makeHTML.open("C:\\Users\\brian\\masm\\solo\\gsharp\\gsserver5\\webroot\\passparseddata.html", ios_base::out);	// use httpserver in node.js to pass makehtml.html to Gsharp1????
 //makeHTML.open("/mnt/chromeos/MyFiles/dev/gsharp/core/makehtml.html", ios_base::out); // 
 //save to file and format to html with element values as objects
 //create file server in gsharp to handle requests from httpserver for updated object values

@@ -1,0 +1,8 @@
+body {background-color: chartreuse; color:blue}
+h1 {background-color: aliceblue; color:darkorange;}
+/*console#console.console {height: 20em; width: 40em; background-color: white; color: black;}
+textarea#console.console {width: 20em; height: 10em; background-color: black; color: white;}
+*/
+console form#console.console {background-color: darkslategrey; color:lightgrey;}
+console form#console.console button#submit.submit {}
+console form#console.console h1 {background-color: cornflowerblue; color:coral}
