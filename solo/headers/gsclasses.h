@@ -7,8 +7,8 @@ using namespace GS_Structs;
 
 // must include global variables from .cpp
 
-    // create a global variable and set it equal to the struct member 
-extern "C"{    
+    // create a global variable and set it equal to the struct membe
+
     string initLogin = "\0";
     string userChoice = "\0";
     string* initLoginPoint = &initLogin;
@@ -661,7 +661,7 @@ void SaveRegUsrLs(){
 	ofstream ULIST(*pathUsrLs, ios_base::out/* | ios_base::binary*/);
 	if (ULIST.is_open()) { // all of FileObj is being saved 
     // include registered
-        ULIST.write(reinterpret_cast<const char*>(&registered), sizeof(registered));
+        //ULIST.write(reinterpret_cast<const char*>(&registered), sizeof(registered));
 		ULIST.write(reinterpret_cast<const char*>(&userList), sizeof(userList)); // Changed from UsrList and in LoadRegUsrLs()
 		cout << "Saved UsrList to file" << endl;
 		ULIST.close();
@@ -672,31 +672,33 @@ void SaveRegUsrLs(){
     }
     
 void LoadRegUsrLs() {
-    FileObj UsrList;
+   // FileObj UsrList;
     
 	cout << "Loading userList" << endl;
 	string fileLoad = "users\\userlist";
 	string* openLoader = &fileLoad;
 
-	ifstream LoadFile(*openLoader, ios_base::in /*| ios_base::binary*/);
-    
+	ifstream LoadFile(*openLoader, ios_base::in);
+    string fileCont;
 	if (LoadFile.is_open()) {
-
-        LoadFile.read((char*)&registered, sizeof(registered));
-		LoadFile.read((char*)&userList, sizeof(userList)); 
+		while(LoadFile.good()){
+			getline(LoadFile, fileCont);
+		}
+		cout << fileCont << endl;
+//        LoadFile.read((char*)&registered, sizeof(registered));
+//		LoadFile.read((char*)&userList, sizeof(userList)); 
         
 	LoadFile.close();
 	}
 	else
 		cout << "LoadRegUsrLs() failed" << endl;
-    }
+    
+	
+	cout << "Exiting Load" << endl;
+	}
 };
 
 };
-
-}
 
 }
 #endif
-    
-    // could atoi be used to store the strings as integers?

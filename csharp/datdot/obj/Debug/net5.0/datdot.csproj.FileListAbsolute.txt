@@ -1,0 +1,16 @@
+C:\Users\brian\masm\csharp\datdot\bin\Debug\net5.0\datdot.exe
+C:\Users\brian\masm\csharp\datdot\bin\Debug\net5.0\datdot.deps.json
+C:\Users\brian\masm\csharp\datdot\bin\Debug\net5.0\datdot.runtimeconfig.json
+C:\Users\brian\masm\csharp\datdot\bin\Debug\net5.0\datdot.runtimeconfig.dev.json
+C:\Users\brian\masm\csharp\datdot\bin\Debug\net5.0\datdot.dll
+C:\Users\brian\masm\csharp\datdot\bin\Debug\net5.0\datdot.pdb
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\datdot.csproj.AssemblyReference.cache
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\datdot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\datdot.AssemblyInfoInputs.cache
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\datdot.AssemblyInfo.cs
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\datdot.csproj.CoreCompileInputs.cache
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\datdot.dll
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\refint\datdot.dll
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\datdot.pdb
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\datdot.genruntimeconfig.cache
+C:\Users\brian\masm\csharp\datdot\obj\Debug\net5.0\ref\datdot.dll

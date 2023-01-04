@@ -1,0 +1,37 @@
+/* sitewide style sheet */
+
+            body {margin: 0; padding: 0;
+                    background-color: silver;}
+            header {background-color: black; color: white; }
+            h1 {background-color: purple; color: green;}
+            h3 {background-color: yellow; color: orange;}
+            #sitenav ol {padding: 0; margin: 0;
+                    display: inline;}
+            #sitenav li {display: inline; padding-left: 1em;
+                        margin-left: 1em;
+                        border-left: 1px solid black;}
+            #sitenav a {color: white;}
+            #main {padding: 0 12em 2em 2em;
+                        position: relative;
+                        background-color: grey;}
+            #content {background-color: white;}
+            #sidebar {position: absolute; width: 10em;
+                        right: 1em; top: 1em;}          <!-- embed and object with a video .className p class -->
+            #sidebar h3 {color: white;                  <!-- add JavaScript functionality that runs a program on -->
+                        background-color: blue;}        <!-- the server side to a p class object and embed -->
+            #sidebar ol {margin: 0 0 1em 0;
+                        background-color: white;        <!-- a div is a block in the chain - assign functionality and call -->
+                        border: 2px solid black;}
+            #sidebar2 {position: relative; width: 10em;
+                        right: 1em; top: 1em; margin: 20px;
+                        padding: 10px;                        
+                        border: 4px solid brown;}
+            #managedby {color: green}                        
+            #vidright      {position: relative; left: 20em; top: 0em;} <!-- px refers to size, em refers to position -->
+            footer {background-color: white;}      
+            .anote {margin: 10px; padding: 90px;
+                        background-color: pink;}
+            .bnote {margin: 10px; padding: 40px;
+                        background-color: red;}
+            .cnote {margin: 10px; padding 20px;
+                        background-color: green;}                         

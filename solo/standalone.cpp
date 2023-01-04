@@ -39,7 +39,7 @@ cout << "After asmMain()" << endl;
 	cout << "In main - after myProc()" << endl;
 	
 
-	system("C:\\Users\\brian\\masm\\solo\\gsharp\\gsharp.exe core");
+	system("C:\\Users\\brian\\masm\\solo\\gsharp\\gsharp.exe coredata");
 	// enter gsharp.cpp here
 	
 	cout << "Exiting main" << endl;

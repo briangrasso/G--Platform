@@ -1,0 +1,110 @@
+﻿  pch.cpp
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(5,17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(7,27): error C2871: 'GS_Structs': a namespace with this name does not exist
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(29,1): error C2440: 'initializing': cannot convert from 'int *' to 'std::string *'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(29,21): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(33,1): error C2446: '==': no conversion from 'const char [4]' to 'int'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(33,22): message : There is no context in which this conversion is possible
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(36,1): error C2446: '==': no conversion from 'const char [5]' to 'int'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(36,24): message : There is no context in which this conversion is possible
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(38,1): error C2446: '==': no conversion from 'const char [2]' to 'int'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(38,25): message : There is no context in which this conversion is possible
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(40,4): error C2065: 'counter': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(42,1): error C2446: '!=': no conversion from 'const char [2]' to 'int'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(42,21): message : There is no context in which this conversion is possible
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(48,12): error C2065: 'counter': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(50,23): error C2065: 'registered': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(51,21): error C2065: 'userList': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(52,5): error C2065: 'registeredUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(87,5): error C2653: 'GSharpStructs': is not a class or namespace name
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(87,20): error C2065: 'UserInfo': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(87,29): error C2146: syntax error: missing ';' before identifier 'Admin'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(87,29): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(90,9): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(92,9): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(94,10): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(97,22): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(111,49): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(111,64): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(122,3): error C2065: 'registeredUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(143,5): error C2065: 'choiceFlag': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(145,25): error C2065: 'totalCmds': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(146,11): error C2065: 'cmdList': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(156,2): error C2065: 'choiceFlag': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(217,24): error C2065: 'GS': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(219,11): error C2065: 'letterWords': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(219,45): error C2065: 'letterArray': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(219,89): error C2065: 'letterArray': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(229,29): error C2065: 'GS': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(229,58): error C2065: 'GS': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(230,29): error C2065: 'GS': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(230,58): error C2065: 'GS': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(231,29): error C2065: 'GS': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(231,58): error C2065: 'GS': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(233,17): error C2065: 'GS': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(301,1): error C2871: 'GS_Structs': a namespace with this name does not exist
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(303,2): error C2653: 'GSharpStructs': is not a class or namespace name
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(303,17): error C2065: 'ToneTable': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(303,27): error C2146: syntax error: missing ';' before identifier 'Core'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(303,1): error C3867: 'GS_Classes::FileObj::CommandLine::LaunchApp::Core': non-standard syntax; use '&' to create a pointer to member
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(329,9): error C2653: 'GSharpStructs': is not a class or namespace name
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(329,24): error C2065: 'ToneTable': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(329,34): error C2146: syntax error: missing ';' before identifier 'gs'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(329,34): error C2065: 'gs': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(340,52): error C2065: 'gs': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(340,105): error C2065: 'gs': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(341,12): error C2065: 'gs': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(341,66): error C2065: 'gs': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(341,120): error C2065: 'gs': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(342,14): error C2065: 'gs': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(399,11): error C2065: 'initLoginPoint': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(404,5): error C2653: 'GSharpStructs': is not a class or namespace name
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(404,20): error C2065: 'UserInfo': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(404,29): error C2146: syntax error: missing ';' before identifier 'Admin'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(404,29): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(406,6): error C2065: 'newUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(408,10): error C2065: 'userChoice': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(410,11): error C2065: 'newUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(411,11): error C2065: 'compareVerify': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(412,10): error C2065: 'userChoice': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(421,5): error C2653: 'GSharpStructs': is not a class or namespace name
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(421,20): error C2065: 'UserInfo': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(421,29): error C2146: syntax error: missing ';' before identifier 'Admin'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(421,29): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(423,6): error C2065: 'newUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(426,11): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(432,9): error C2065: 'verification': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(434,1): error C2440: 'initializing': cannot convert from 'int *' to 'std::string *'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(434,23): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(440,2): error C2653: 'GSharpStructs': is not a class or namespace name
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(440,17): error C2065: 'UserInfo': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(440,26): error C2146: syntax error: missing ';' before identifier 'GetUser'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(440,26): error C2065: 'GetUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(445,25): error C2065: 'GetUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(445,41): error C2065: 'GetUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(448,18): error C2065: 'GetUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(450,18): error C2065: 'compareVerify': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(454,7): error C2065: 'verification': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(454,23): error C2065: 'compareVerify': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(456,4): error C2065: 'entryFlag': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(457,13): error C2065: 'newUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(472,5): error C2653: 'GSharpStructs': is not a class or namespace name
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(472,20): error C2065: 'UserInfo': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(472,29): error C2146: syntax error: missing ';' before identifier 'Admin'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(472,29): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(475,21): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(482,6): error C2065: 'registeredUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(485,10): error C2065: 'verification': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(488,20): error C2065: 'Admin': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(501,13): error C2653: 'GSharpStructs': is not a class or namespace name
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(501,28): error C2065: 'UserInfo': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(501,37): error C2146: syntax error: missing ';' before identifier 'GetUser'
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(501,37): error C2065: 'GetUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(503,26): error C2065: 'GetUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(503,42): error C2065: 'GetUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(506,21): error C2065: 'GetUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(510,8): error C2065: 'verification': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(513,5): error C2065: 'entryFlag': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(514,17): error C2065: 'newUser': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(533,9): error C2065: 'entryFlag': undeclared identifier
+C:\Users\brian\masm\solo\gsharp\gsserver5\gscpp\gsharp\headers\gsclasses.h(533,1): fatal error C1003: error count exceeds 100; stopping compilation

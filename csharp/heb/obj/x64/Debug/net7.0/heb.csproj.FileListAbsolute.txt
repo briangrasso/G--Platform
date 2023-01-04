@@ -1,0 +1,15 @@
+C:\Users\brian\masm\csharp\heb\bin\x64\Debug\net7.0\heb.exe
+C:\Users\brian\masm\csharp\heb\bin\x64\Debug\net7.0\heb.deps.json
+C:\Users\brian\masm\csharp\heb\bin\x64\Debug\net7.0\heb.runtimeconfig.json
+C:\Users\brian\masm\csharp\heb\bin\x64\Debug\net7.0\heb.dll
+C:\Users\brian\masm\csharp\heb\bin\x64\Debug\net7.0\heb.pdb
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\heb.csproj.AssemblyReference.cache
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\heb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\heb.AssemblyInfoInputs.cache
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\heb.AssemblyInfo.cs
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\heb.csproj.CoreCompileInputs.cache
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\heb.dll
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\refint\heb.dll
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\heb.pdb
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\heb.genruntimeconfig.cache
+C:\Users\brian\masm\csharp\heb\obj\x64\Debug\net7.0\ref\heb.dll

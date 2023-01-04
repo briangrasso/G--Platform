@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/gsharp/gsserver5/gsserver.csproj",
+                "${workspaceFolder}\\gsharp\\gsserver5\\gsserver.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

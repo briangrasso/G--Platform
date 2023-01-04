@@ -9,7 +9,7 @@ namespace datdot
 
         static void Main(string[] args)
         {
-		using (Stream NewerS = new FileStream("F:\\bitcoin\\bitcoin-22.0\\datadir\\chainstate\\497569.ldb", FileMode.Open)){
+		using (Stream NewerS = new FileStream("..\\solo\\gsharp\\usrfiles\\asdf", FileMode.Open)){
 			//	NewerS.Read(dotspermill, 0, dotspermill.Length));
 			NewerS.Write(dotspermill, 0, dotspermill.Length);
 			Console.WriteLine(NewerS.Read(dotspermill, 0, dotspermill.Length));

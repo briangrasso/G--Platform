@@ -15,34 +15,49 @@ void DisplayBoard(Board& fBoard){
 const int numAttrib = tuple_size<Board>::value;
 // add javaScript code to make each tuple an object
 // ???write parser in javascript to collect each letter element and create objects of the data???
-makeHTML << "testing" << get<numAttrib - 4>(fBoard) << "\t" << get<numAttrib - 3>(fBoard) << "\t" << get<numAttrib - 2>(fBoard) << "\t" << get<numAttrib - 1>(fBoard) << "<br>" <<  endl;
+makeHTML << get<numAttrib - 4>(fBoard) << "\t" << get<numAttrib - 3>(fBoard) << "\t" << get<numAttrib - 2>(fBoard) << "\t" << get<numAttrib - 1>(fBoard) << "<br>" <<  endl;
 
-cout << "testing" << get<numAttrib - 4>(fBoard) << "\t" << get<numAttrib - 3>(fBoard) << "\t" << get<numAttrib - 2>(fBoard) << "\t" << get<numAttrib - 1>(fBoard) << endl;
+cout << get<numAttrib - 4>(fBoard) << "\t" << get<numAttrib - 3>(fBoard) << "\t" << get<numAttrib - 2>(fBoard) << "\t" << get<numAttrib - 1>(fBoard) << endl;
 }
 
 /* the incoming data from the html GET request can be passed as string variables in C# to child processes as arguments */
 
-int main(){
+int main(int argc, char** argv){
+	for(int outArgs = 0; outArgs < argc; ++outArgs){
+		cout << argv[outArgs] << "\t";
+	}
+
+/* write if statement to allow coreValues to process arguments for key
+and location of Hebrew letters */
+	cout << endl;
 GSharpStructs::ToneTable boardGS;
 cout << "Glyph:\t" << "Name:\t" << "ABVal:\t" << "CVal:" << endl;
 
-makeHTML.open("C:\\Users\\brian\\masm\\solo\\gsharp\\gsserver5\\webroot\\passparseddata.html", ios_base::out);	// use httpserver in node.js to pass makehtml.html to Gsharp1????
+makeHTML.open("C:\\Users\\brian\\masm\\solo\\gsharp\\gsserver5\\webroot\\passdata\\passparseddata.html", ios_base::out);	// use httpserver in node.js to pass //makehtml.html to Gsharp1????
 //makeHTML.open("/mnt/chromeos/MyFiles/dev/gsharp/core/makehtml.html", ios_base::out); // 
 //save to file and format to html with element values as objects
 //create file server in gsharp to handle requests from httpserver for updated object values
 if(makeHTML.is_open()){
 cout << "File open successful" << endl;
 
-makeHTML << "<!DOCTYPE html><html><head><title>C++ Shared Object/HTML file</title><meta charset=\"UTF-8\"><style></style></head><body><p>" << \
-		"<script>document.write(\"Success\")</script></p><div>" << endl;
+makeHTML << "<!DOCTYPE html>" << endl << "<html>" << endl << "<head>" << endl << \
+		endl << "<title>C++ Shared Object/HTML file</title>" << endl << \
+		endl << "<meta charset=\"UTF-8\">" << endl << "<link rel=\"icon\" type=\"image/x-icon\" href=\"../brianhead.jpeg\">" << endl << "<style></style>" << \
+		endl << "</head>" << endl << "<body>" << endl << "<p>" << endl << \
+		"<script>document.write(\"Success\");</script><br>" << endl << "Interpolated variable (should say core): " << \
+		argv[] << endl << "</p>" << endl << \
+		"<div>" << endl;
 // build html objects for tuple elements to make accessible from browsers and ASSIGN DISPLAY CHARACTERistics VISUALLY for clients - can be used to CHAIN LETTERS TOGETHER for converting 
 // strings of Hebrew letters into visual output. Use values in graphs/graphics/PROGRAMMING
 for(int tupleInc = 0; tupleInc < 22; ++tupleInc){
 tuple<string, string, wchar_t, int> fBoardGS(make_tuple(Literals[tupleInc], letterWords[tupleInc], AlephBet[tupleInc], letterArray[tupleInc]));	// place chords in vector -- place tones in vector
 DisplayBoard(fBoardGS);
 }
+/*each iteration of the tuple set from DisplayBoard() is the cause for the new line 
+being started (not the inline endl = insert linebreak method()) for all of the data 
+written to the passparseddata.html file*/
 
-makeHTML << "</div></body></html>" << endl;
+makeHTML << "\r</div>\r</body>\r</html>\r\r" << endl;
 
 cout << "File write complete" << endl;
 

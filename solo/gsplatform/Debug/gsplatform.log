@@ -1,0 +1,29 @@
+﻿  standalone.cpp
+C:\Users\brian\masm\solo\headers\gsstructs.h(17,3): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\brian\masm\solo\headers\gsstructs.h(18,3): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,30): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,39): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,49): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,59): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,69): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,79): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,89): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,99): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,109): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,118): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,128): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(31,138): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,8): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,17): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,26): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,35): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,44): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,53): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,62): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,71): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,80): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(32,89): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\headers\gsclasses.h(58,13): warning C4101: 'UsrList': unreferenced local variable
+C:\Users\brian\masm\solo\headers\gsclasses.h(116,13): warning C4101: 'UsrList': unreferenced local variable
+C:\Users\brian\masm\solo\headers\gsclasses.h(171,37): warning C4101: 'AddApp': unreferenced local variable
+C:\Users\brian\masm\solo\headers\gsclasses.h(654,13): warning C4101: 'UsrList': unreferenced local variable

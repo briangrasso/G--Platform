@@ -1,49 +1,50 @@
 #ifndef GSCLASSES_H_
 #define GSCLASSES_H_
-#include "gsheaders.h"
-    
+#include "headers/gsheaders.h"
+#include "gsstructs.h"
+
 using namespace std;
 using namespace GS_Structs;
+
+string initLogin = "\0";
+int counter = 0;
+int registered = 1;
+bool choiceFlag = 0;
+bool newUser = 0;
+bool registeredUser = 0;
+bool entryFlag = 0;
+string userChoice = "\0";
+int totalCmds = 9;
+string verification = "\0";
+string compareVerify;
+string* initLoginPoint = &initLogin;
+
+vector<string> cmdList(totalCmds);  // think log1 (z1)
+vector<string> userList(registered);// think log2 (z2)
+
+int y = 0;
+
+wchar_t AlephBet[22] = { L'א', L'ב', L'ג', L'ד', L'ה', L'ו', L'ז', L'ח', L'ט', L'י', L'כ', L'ל', \
+						L'מ', L'נ', L'ס', L'ע', L'פ', L'צ', L'ק', L'ר', L'ש', L'ת' };
+string RevLiterals[22] = { "ת", "ש", "ר", "ק" ,"צ", "פ", "ע", "ס", "נ", "מ", "ל", "כ", "י", "ט", "ח", "ז", "ו", "ה", "ד", "ג", "ב","א" };
+string Literals[22] = { "א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט", "י", "כ", "ל", "מ", "נ", "ס", "ע", "פ", "צ", "ק", "ר", "ש", "ת" };
+
+GSharpStructs::ToneTable GS;// make a list of every class instantiation, and their attributes
+
+const vector<int> letterArray{ GS.aleph, GS.bet, GS.gimmel, GS.dalet, GS.heh, GS.vav, GS.zayin, GS.chet, GS.tet, GS.yod,\
+GS.kaf, GS.lamed, GS.mem, GS.nun, GS.samech, GS.ayin, GS.pe, GS.tzade, GS.qoph, GS.resh, GS.shin, GS.tav };
+// make method for returning each letter after selecting key
+
+const vector<string> letterWords{ "Aleph", "Bet", "Gimmel", "Dalet", "Heh", "Vav", "Zayin", "Chet", "Tet", "Yod", "Kaf", "Lamed", "Mem", "Nun", \
+	"Samech", "Ayin", "Pe", "Tzade", "Qoph", "Resh", "Shin", "Tav" };
+
+
+//GSharpStructs::UserInfo Admin;
+
 
 // must include global variables from .cpp
 
     // create a global variable and set it equal to the struct member 
-extern "C"{    
-    string initLogin = "\0";
-    string userChoice = "\0";
-    string* initLoginPoint = &initLogin;
-    bool choiceFlag = 0;
-    int counter = 0;
-    bool newUser = 0;
-    bool registeredUser = 0;
-    bool entryFlag = 0;
-    int y = 0;
-    string verification = "\0";
-    
-    int totalCmds = 9;
-    vector<string> cmdList(totalCmds);  // think log1 (z1)
-    
-    int registered = 2;    
-    vector<string> userList(registered);// think log2 (z2)
-    
-    string compareVerify;
-    
-    wchar_t AlephBet[22] = { L'א', L'ב', L'ג', L'ד', L'ה', L'ו', L'ז', L'ח', L'ט', L'י', L'כ', L'ל', \
-							L'מ', L'נ', L'ס', L'ע', L'פ', L'צ', L'ק', L'ר', L'ש', L'ת' };
-    
-    string RevLiterals[22] = {"ת", "ש", "ר", "ק" ,"צ", "פ", "ע", "ס", "נ", "מ", "ל", "כ", "י", "ט", "ח", "ז", "ו", "ה", "ד", "ג", "ב","א"};
-   
-    string Literals[22] = {"א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט", "י", "כ", "ל", "מ", "נ", "ס", "ע", "פ", "צ", "ק", "ר", "ש", "ת"};
-
-
-	GSharpStructs::ToneTable GS;// make a list of every class instantiation, and their attributes
-    const vector<int> letterArray{ GS.aleph, GS.bet, GS.gimmel, GS.dalet, GS.heh, GS.vav, GS.zayin, GS.chet, GS.tet, GS.yod,\
-    GS.kaf, GS.lamed, GS.mem, GS.nun, GS.samech, GS.ayin, GS.pe, GS.tzade, GS.qoph, GS.resh, GS.shin, GS.tav };
-	// make method for returning each letter after selecting key
-	
-    const vector<string> letterWords{ "Aleph", "Bet", "Gimmel", "Dalet", "Heh", "Vav", "Zayin", "Chet", "Tet", "Yod", "Kaf", "Lamed", "Mem", "Nun", \
-		"Samech", "Ayin", "Pe", "Tzade", "Qoph", "Resh", "Shin", "Tav" };
-
 
 namespace GS_Classes{
 /*class Declarations{
@@ -55,7 +56,7 @@ public:
     
 int InLogFunc(){
     FileObj::CommandLine ComLine;
-    FileObj UsrList;
+    //FileObj UsrList;
     FileObj::Administration Admin_Action;
 
 	string* loginPoint = &initLogin;
@@ -169,7 +170,7 @@ class LaunchApp{
 public:
     
 void Help() {
-    FileObj::CommandLine::LaunchApp AddApp;
+    //FileObj::CommandLine::LaunchApp AddApp;
     FileObj::CommandLine ComLine;
 	
     choiceFlag = 0;
@@ -243,7 +244,7 @@ cout << "after system call in Core()" << endl;
                     //so they cannot be accessed by other services (red security detail in system drawing - Facebook)
 	cout << "Core" << endl;
 
-//	GSharpStructs::ToneTable GS;
+GSharpStructs::ToneTable GS;
 FileObj::CommandLine::LaunchApp AddApp;
 
 	short int* pointer = &GS.aleph;    // Returning the value
@@ -340,7 +341,7 @@ using namespace GS_Structs;
 
 			cout << "Values in Key:" << endl;
 
-			string pathmaker = "C:\\Users\\brian\\masm\\solo\\gsharp\\valsheet\\values";
+			string pathmaker = "C:\\Users\\brian\\masm\\solo\\gsharp\\valsheet\\values.txt";
 			string* opener = &pathmaker;
 
 			if (forKey >= -4 && forKey <= 7) {
@@ -500,7 +501,7 @@ void Verify() {
 
 }
     
-void VerifyNew(/*char passNewUser[10]*/) {// return Admin.newUser in MakeUser() to VerifyNew() prototype
+void VerifyNew() {// return Admin.newUser in MakeUser() to VerifyNew() prototype
     GSharpStructs::UserInfo Admin;
     
 		stringstream convertNewUser;
@@ -627,8 +628,24 @@ FileObj::CommandLine::LaunchApp AddApp;
 			break;
 		}
 		else if (userChoice == cmdList[7]) {
+	//write method for passing commands from server window 
+	// back to gsplatform to stop the server and close 
+	// the server window
+			//create command to kill server and close window from 
+			//gsplatform command line
+			//create method for loading different IP addresses
+			//for each new creation of server from gs command line
 			cout << "Starting G# Server" << endl;		// write cmd to build and run C# obj.
-			system("dotnet run --project C:\\Users\\brian\\masm\\solo\\gsharp\\gsserver5");
+			//system("powershell Start-Process C:\\Users\\brian\\masm\\solo\\gsharp\\gsserver5\\bin\\Debug\\net5.0\\gsserver.exe -verb RunAs");
+//			system("server.bat");
+			//system("powershell Start-Process cmd -verb RunAs -ArgumentList server");
+			system("server");
+			//system("server.bat");
+			/*currently server must be run from serparate process to
+			serve html files, otherwise need method to interpolate variable data
+			into pre-formatted html document*/
+			//write shell script.bat to start process
+			//system("powershell Start-Process C:\\Users\\brian\\masm\\solo\\gsharp\\gsserver5\\bin\\Debug\\net5.0\\gsserver.exe -verb RunAs -argumentlist core");
 			break;
 		}
 		else if (userChoice == cmdList[8]) {
@@ -657,7 +674,7 @@ void SaveRegUsrLs(){
     
 	cout << "Saving userList" << endl;
 
-	string usrLsPath = "C:\\Users\\brian\\masm\\solo\\gsharp\\users\\userlist";
+	string usrLsPath = "C:\\Users\\brian\\masm\\solo\\gsharp\\users\\userlist.txt";
 	string* pathUsrLs = &usrLsPath;
 
 	ofstream ULIST(*pathUsrLs, ios_base::out/* | ios_base::binary*/);
@@ -674,10 +691,10 @@ void SaveRegUsrLs(){
     }
     
 void LoadRegUsrLs() {
-    FileObj UsrList;
+    //FileObj UsrList;
     
 	cout << "Loading userList" << endl;
-	string fileLoad = "C:\\Users\\brian\\masm\\solo\\gsharp\\users\\userlist";
+	string fileLoad = "C:\\Users\\brian\\masm\\solo\\gsharp\\users\\userlist.txt";
 	string* openLoader = &fileLoad;
 
 	ifstream LoadFile(*openLoader, ios_base::in /*| ios_base::binary*/);
@@ -685,9 +702,11 @@ void LoadRegUsrLs() {
 	if (LoadFile.is_open()) {
 
         LoadFile.read((char*)&registered, sizeof(registered));
-		LoadFile.read((char*)&userList, sizeof(userList)); 
+		LoadFile.read((char*)&userList, sizeof(userList)); // maybe array must be saved as obj data first!!!!
         
 	LoadFile.close();
+	cout << "Registered: " << registered << endl;
+	cout << "Userlist: " << userList[0] << endl;
 	}
 	else
 		cout << "LoadRegUsrLs() failed" << endl;
@@ -695,8 +714,6 @@ void LoadRegUsrLs() {
 };
 
 };
-
-}
 
 }
 #endif

@@ -1,0 +1,27 @@
+﻿  gsharp.cpp
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,26): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,35): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,45): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,55): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,65): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,75): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,85): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,95): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,105): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,114): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,124): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(27,134): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,7): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,16): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,25): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,34): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,43): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,52): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,61): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,70): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,79): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(28,88): warning C4066: characters beyond first in wide-character constant ignored
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(118,13): warning C4101: 'UsrList': unreferenced local variable
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(673,13): warning C4101: 'UsrList': unreferenced local variable
+C:\Users\brian\masm\solo\gsharp\headers\gsclasses.h(694,13): warning C4101: 'UsrList': unreferenced local variable
+  ConsoleApplication1.vcxproj -> C:\Users\brian\masm\solo\gsharp\ConsoleApplication1\Debug\ConsoleApplication1.exe

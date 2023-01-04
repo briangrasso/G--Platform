@@ -12,9 +12,9 @@
             "justMyCode": false,
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/gsharp/gsserver5/bin/x64/Debug/net5.0/gsserver.dll",
+            "program": "${workspaceFolder}/gsplatform.exe",
             "args": [],
-            "cwd": "${workspaceFolder}/gsharp/gsserver5",
+            "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
